@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import City from './City';
 
 function App() {
+  
   const key = "092842c7ac5b2096e7492bcaf0741cd7";
   const [search, setSearch] = useState("");
   const [city, setCity] = useState();//1.si(city) kullanmamızı 2.si değişiklik yapmamızı sağlar
@@ -26,15 +27,15 @@ function App() {
 console.log(search);
 
  return (
-
-  <div className='App'>
+  <div className='App mb-5 mx-auto p-4 bg-purple-400 h-screen flex justify-center'> 
+    
   <div>
 
     <input 
     onChange={(e)=> setSearch(e.target.value)} //girilen değerlerin setSearch içine yazılması
       type="text"
       placeholder="Placeholder"
-      className="px-3 w-[250px] py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring"
+      className="mb-5 px-3 w-[250px] py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring bg-gradient-to-b from-gray-300 via-gray-200 to-blue-100"
       />
       
 
@@ -43,7 +44,6 @@ console.log(search);
 
   </div>
  </div>
- 
 
  );
 }
